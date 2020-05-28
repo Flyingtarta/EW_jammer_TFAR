@@ -1,0 +1,7 @@
+//Debug
+enableDebugConsole = 1;
+
+class CfgFunctions {
+	#include "functions.hpp"
+};
+//onMinimapScript[] = {"BIS_fnc_customGPS_Spawn"};
