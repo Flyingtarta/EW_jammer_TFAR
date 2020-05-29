@@ -1,1 +1,1 @@
-missionnamespace setvariable ["JammerActivos",[]];
+missionnamespace setvariable ["JammerActivos",[],true];
