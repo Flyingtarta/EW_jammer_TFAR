@@ -1,6 +1,6 @@
 //Debug
 //enableDebugConsole = 1;
 
-class CfgFunctions {
-	#include "functions.hpp"
-};
+//class CfgFunctions {
+//	#include "functions.hpp"
+//};
