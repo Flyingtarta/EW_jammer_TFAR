@@ -1,2 +1,3 @@
-private _jammers = []; // poner en este array el nombre de variable del objeto que se quiere usar de jammer de radio
+_jammers = [];
+waituntil {sleep 1;time > 5}; 
 missionnamespace setvariable ["JammerActivos",_jammers,true];
