@@ -1,4 +1,24 @@
 params ["_player"];
+/*
+Autor: [Calaveras] Tarta
+
+Descripcion: 
+    Script que se ejecuta en el jugador para medir la distancia al jammer activo mas cercano 
+    y modificar el parametro que hace que la radio se deteriore de manera lineal de acuerdo a la distancia
+   
+   se afecta en 2 niveles, 500 metros a la redonda las radios larga tienen un radio efectivo de 500 metros y afecta tanto la recepcion como la emision
+   entre los 500 y 2000 metros el efecto empieza a bajar y la emision no se ve tan comprometida, pero si la recepcion
+   (alguien fuera del rango lo puede escuchar, pero el que este dentro no) 
+   
+Changelog: 
+    29/5/2020: Simplificado para poder ser usado como script, sin el description.ext
+Version: 
+    v0.1
+Todo:
+    Que el rango del jammer pueda ser definido junto al jammer y que varios jammer puedan tener diferentes rangos de jammeo
+*/
+
+
 _player setvariable ["tf_receivingDistanceMultiplicator",1];
 while {true} do {
   _jammers = missionNamespace getvariable "JammerActivos";
