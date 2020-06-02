@@ -1,6 +1,5 @@
-params["_player"];
-[_player] spawn {
-  params["_player"];
-  [_player] execvm "EWarfare/jammer_initPlayer.sqf";
+[] spawn {
+  //[player] call clv_fnc_jammer_initPlayer;
+  0 = [player] execvm "EWarfare\Jammer_InitPlayer.sqf";
 };
 
