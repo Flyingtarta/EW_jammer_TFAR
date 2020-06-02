@@ -1,3 +1,3 @@
 Jammers = [];
-waituntil {sleep 1;time > 5}; 
+waitUntil {time > 3};
 missionnamespace setvariable ["JammerActivos",Jammers,true];
