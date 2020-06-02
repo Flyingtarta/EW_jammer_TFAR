@@ -18,7 +18,8 @@ Todo:
     Que el rango del jammer pueda ser definido junto al jammer y que varios jammer puedan tener diferentes rangos de jammeo
 */
 
-
+params ["_player"];
+waituntil {count (missionNamespace getvariable ["JammerActivos",[]]) > 0};
 _player setvariable ["tf_receivingDistanceMultiplicator",1];
 while {true} do {
   _jammers = missionNamespace getvariable "JammerActivos";
@@ -32,7 +33,7 @@ while {true} do {
       _jammers_sorted sort true;
       _jam = _jammers_sorted select 0 select 1;//elegimos el mas cercano
     };
-    _interf_r = linearConversion [500,2000, _jam distance2d _player, 10,1,true];
+    _interf_r = linearConversion [500,2000, _jam distance2d _player, 10,2,true];
     _interf_s = linearConversion [250,1000, _jam distance2d _player, 0.4,1,true];
     _player setvariable ["tf_receivingDistanceMultiplicator",_interf_r];
     _player setVariable ["tf_sendingDistanceMultiplicator",_interf_s];
