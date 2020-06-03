@@ -15,12 +15,12 @@ Entrada:
 if !(isServer) exitWith {};
 waituntil {time > 1};
 
-params["_this","_radio"];
+params["_jammer","_radio"];
 
-Jammers pushbackunique _this; //agregamos el jammer a la lista
-missionNamespace setvariable [str _this, _radio]; //guardamos la variable del radio para ese jammer en particular
+Jammers pushbackunique _jammer; //agregamos el jammer a la lista
+missionNamespace setvariable [str _jammer, _radio]; //guardamos la variable del radio para ese jammer en particular
 
-_this addeventhandler ["killed",{
+_jammer addeventhandler ["killed",{
   params ["_jammer"];
   _JammerActivos = missionNamespace getvariable "JammerActivos";
   _JammerActivos = _JammerActivos - [_Jammer];
@@ -28,7 +28,7 @@ _this addeventhandler ["killed",{
   _jammer removealleventhandlers "killed";
   }];
 
-_this addEventHandler ["Deleted", {
+_jammer addEventHandler ["Deleted", {
   params ["_jammer"];
   _JammerActivos = missionNamespace getvariable "JammerActivos";
   _JammerActivos = _JammerActivos - [_Jammer];
