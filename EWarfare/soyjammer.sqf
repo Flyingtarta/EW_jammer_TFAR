@@ -6,7 +6,7 @@ Descripcion:s
   si el objeto es destruido le saca el jammeo
 
 Entrada:
-  _this = (objecto)
+  _jammer = (objecto)
   _Radio = (Numero) valor maximo de accion del Jammer:
           1/2 de _radio empieza a afectar salida
           1/4 de radio, interferencia practicamente total
